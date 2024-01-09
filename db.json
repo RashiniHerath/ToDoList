@@ -1,16 +1,8 @@
 {
-    "tasks": [
-      {
-        "id": 1,
-        "title": "Sample Task 1",
-        "completed": false
-      },
-      {
-        "id": 2,
-        "title": "Sample Task 2",
-        "completed": true
-      }
-
-    ]
-  }
-  
+  "task" : [
+    {
+      "id" : 1,
+      "task_name":"Subscribe to codelogic"
+    }
+  ]
+}
