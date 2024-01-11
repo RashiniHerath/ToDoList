@@ -41,3 +41,28 @@ export class DashboardComponent implements OnInit {
       alert(err);
     })
   }
+
+  editTask() {
+    this.taskObj.task_name = this.editTaskValue;
+    this.crudService.editTask(this.taskObj).subscribe(res => {
+      this.ngOnInit();
+    }, err=> {
+      alert("Failed to update task");
+    })
+  }
+
+  deleteTask(etask : Task) {
+    this.crudService.deleteTask(etask).subscribe(res => {
+      this.ngOnInit();
+    }, err=> {
+      alert("Failed to delete task");
+    });
+  }
+
+  call(etask : Task) {
+    this.taskObj = etask;
+    this.editTaskValue = etask.task_name;
+  }
+
+
+}
